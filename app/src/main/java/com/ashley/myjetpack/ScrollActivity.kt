@@ -1,5 +1,6 @@
-package com.ashley.jetpackcompose
+package com.ashley.myjetpack
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,6 +8,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -34,6 +36,16 @@ class ScrollActivity : ComponentActivity() {
                 ) {
                     val students = listOf("James", "Willy", "Liam", "June", "Robi", "John")
                     DashBoardScreen(students = students)
+                    Column {
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Button(onClick = {
+                            val intent = Intent(this@ScrollActivity,TopActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                            Text(text = "NEXT")
+
+                        }
+                    }
                 }
             }
         }

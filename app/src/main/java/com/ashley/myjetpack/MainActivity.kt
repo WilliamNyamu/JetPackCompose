@@ -1,4 +1,4 @@
-package com.ashley.jetpackcompose
+package com.ashley.myjetpack
 
 import android.content.Intent
 import android.os.Bundle
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                         ImageCard(painter = painterResource(id = R.drawable.cards), contentDescription ="mycard", title = "Elevation Worship")
                         Spacer(modifier = Modifier.height(10.dp))
                         Button(onClick = {
-                            val intent = Intent(this@MainActivity,ScrollActivity::class.java)
+                                val intent = Intent(this@MainActivity,ScrollActivity::class.java)
                             startActivity(intent)
                         }) {
                             Text(text = "SCROLLABLE")
